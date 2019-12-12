@@ -2,49 +2,26 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" type="text/css" href="../../../style.css">
-  <title>Mr L's projects</title>
+  <title>LHS Games Programming</title>
   <!--<meta name="viewport" content="width=device-width, initial-scale=1">!-->
   <meta name="viewport" content="width=400" />
   <style>
     #pane {
       width: 100%;
-      background-color: rgba(255, 255, 255, 1);
-      border: solid 2px blue;
+      background-color: rgb(255, 255, 255);
+      border: solid 2px rgb(130,63,99);
       cursor: crosshair;
     }
 
-    @font-face {
-        font-family: 'Merienda';
-        src: url('fonts/Merienda-Regular.ttf')
-    }
-    @font-face {
-        font-family: 'Merienda-Bold';
-        src: url('fonts/Merienda-Bold.ttf')
-    }
-    @font-face {
-        font-family: 'LatinMonoBold';
-        src: url('fonts/LatinMonoBold.otf')
-    }
-
-    @font-face {
-        font-family: 'LatinMono';
-        src: url('fonts/LatinMono.otf')
-    }
 
   </style>
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 </head>
 <body>
 <div class="header">
-  <h1>Mr L's Projects</h1>
+  <h1>LHS Games Programming</h1>
 </div>
 
-<div class="navbar">
-  <ul>
-    <li><a href="/index.html">Home</a></li>
-    <li><a href="javascript:void(0)" class="onpage"><h2>Probability Pilgrimage</h2></a></li>
-  </ul>
-</div>
 <div class="content">
 <div id="game">
   <canvas id="pane" width=1000 height=600 border="solid 20px red" oncontextmenu="return false;">Please update your browser to see this game!</canvas>
@@ -52,14 +29,17 @@
   <div class="central-box">
     <div class="instructions">
       <p>
-        This game is a work in progress.
+        Use the world map to help you choose the order of your projects.
+      </p>
+      <p>
+        The further out and the deeper the water, the harder the project.
       </p>
     </div>
   </div>
 </div>
 <div class="footer">
   <div class="footer-line">
-    <a href="probability_pilgrimage_game.html" style="font-size: 20px">Reset Game</a>
+    <p>“It's not a bug, it's a feature!” - Anonymous Game Programmer</p>
   </div>
 </div>
 <script type="module" src="src/main.js"></script>

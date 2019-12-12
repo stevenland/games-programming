@@ -22,36 +22,19 @@ const ctx = document.getElementById('pane').getContext('2d');
 
 // bindings    TODO - add gamepad?
 const keyBindings = {
-  run_experiment: ["Enter", " "],
-  ui_down: ["ArrowDown", "s"],
-  ui_up: ["ArrowUp", "w"],
-  ui_left: ["ArrowLeft", "a"],
-  ui_right: ["ArrowRight", "d"],
-  ui_accept: ["Enter", " "],
-  next_background: ["b"],
-  p1_move_up: ["ArrowUp", "w"],
-  dd_console: ["`"],
-  toggle_menu: ["Escape"],
-  deploy_fuzzy: [" "],
-  remove_fuzzy: ["r"],
-  toggle_player: ["p"],
+  scroll_up: ["ArrowUp", "w"],
+  scroll_down: ["ArrowDown", "s"],
+  scroll_left: ["ArrowLeft", "a"],
+  scroll_right: ["ArrowRight", "d"]
+
 }
 
 // axes can be accessed in the form "left stick left"
 const gamepadBindings = {
-  run_experiment: [],
-  ui_down: [13, "left stick down"],
-  ui_up: [12, "left stick up"],
-  ui_left: [14, "left stick left"],
-  ui_right: [15, "left stick right"],
-  ui_accept: [0],
-  next_background: [],
-  p1_move_up: [],
-  dd_console: [],
-  toggle_menu: [9],
-  deploy_fuzzy: [0],
-  remove_fuzzy: [1],
-  toggle_player: [8],
+  scroll_up: ["left stick up"],
+  scroll_down: ["left stick down"],
+  scroll_left: ["left stick left"],
+  scroll_right: ["left stick right"]
 }
 
 // module properties ()
@@ -142,13 +125,15 @@ function searchForAlias(alias, set) {
     let acceptableButtons = gamepadBindings[alias];
     for (const button of acceptableButtons) {
       if (typeof button === "number") {
-        if (buttonState && buttonStateLastFrame && buttonState[button].pressed && !(buttonStateLastFrame[button].pressed)) {
-          return true;
+        if (buttonState && buttonStateLastFrame && buttonState[button].pressed) {
+          if (!(buttonStateLastFrame[button].pressed) || set === "keysHeld") {
+            return true;
+          }
         }
       }
       else if (typeof button === "string") {
         if (axisState && axisStateLastFrame) {
-          return matchAxisInput(button);
+          return matchAxisInput(button, true);
         }
       }
     }
@@ -157,29 +142,29 @@ function searchForAlias(alias, set) {
   return false;
 }
 
-function matchAxisInput(string) {
+function matchAxisInput(string, held) {
   const arr = string.split(" ")
   const stick = arr[0];
   const direction = arr[2];
 
   if (stick === "left") {
     if (direction === "left") {
-      if (axisState[0] < -deadzone && axisStateLastFrame[0] >= -deadzone) {
+      if (axisState[0] < -deadzone && (axisStateLastFrame[0] >= -deadzone || held)) {
         return true;
       }
     }
     if (direction === "right") {
-      if (axisState[0] > deadzone && axisStateLastFrame[0] <= deadzone) {
+      if (axisState[0] > deadzone && (axisStateLastFrame[0] <= deadzone || held)) {
         return true;
       }
     }
     if (direction === "up") {
-      if (axisState[1] < -deadzone && axisStateLastFrame[1] >= -deadzone) {
+      if (axisState[1] < -deadzone && (axisStateLastFrame[1] >= -deadzone || held)) {
         return true;
       }
     }
     if (direction === "down") {
-      if (axisState[1] > deadzone && axisStateLastFrame[1] <= deadzone) {
+      if (axisState[1] > deadzone && (axisStateLastFrame[1] <= deadzone || held)) {
         return true;
       }
     }
@@ -205,11 +190,9 @@ function keyDown(e) {
   log.keysHeld.add(e.key); // automatically ignores duplicates
   if (e.repeat) {
     log.keysJustRepeated.add(e.key);
-    console.log("key repeated")
 
   } else {
     log.keysJustPressed.add(e.key);
-    console.log("key pressed")
   }
 }
 
