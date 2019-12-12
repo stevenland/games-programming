@@ -1,0 +1,331 @@
+@font-face {
+  font-family: 'Comic Neue';
+  src: url('fonts/ComicNeue-Regular.ttf');
+  font-display: block;
+}
+
+body {
+  background-color: rgb(219, 239, 255);
+  padding: 0;
+  margin: 0;
+  font-family: "Comic Neue", "Comic Sans Ms", sans-serif;
+  font-weight: 400;
+  font-size: 112.5%;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.05em;
+  font-weight: 700;
+  margin: 0;
+  padding: 0 25px 0 25px;
+}
+
+h3 {
+  font-size: 1.4em;
+  margin: 10px 0px 5px 0px;
+  padding: 10px 0px 0px 0px;
+}
+
+h4 {
+  font-size: 1.2em;
+  margin: 10px 0px 2px 0px;
+  padding: 10px 0px 0px 0px;
+}
+
+img {
+  padding: 15px 0px 0px 0px;
+}
+
+p {
+  line-height: 150%;
+  padding: 0;
+  margin: 4px 0 10px 0;
+  font-family: Verdana, sans-serif;
+  font-size: 0.89em;
+  font-weight: 100;
+}
+
+hr {
+	width: 100%;
+    border: 0;
+    margin: 20px 0;
+    height: 2px;
+    background: linear-gradient(to right, rgb(219, 239, 255), rgb(80, 130, 210) 50%, rgb(219, 239, 255));
+}
+
+iframe {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: darkblue;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.header {
+  text-align: center;
+  margin:0;
+  padding: 20px 0px 12px 0px;
+  background-color: rgb(80, 130, 210);
+  color: white;
+}
+
+.content {
+    padding: 0;
+    margin: 0 auto;
+    width: 95%;
+    max-width: 1000px;
+    min-height: 450px;
+    text-align: center;
+}
+
+.content ul, .content ol {
+  font-size: 0.89em;
+  font-family: Verdana, sans-serif;
+  margin: 0 0 10px 0;
+}
+
+.content ol li {
+  margin: 0 0 10px 0;
+}
+
+/* Footer styling */
+.footer {
+  text-align: center;
+  margin: 20px 0 40px 0;
+  padding: 8px;
+  background-color: rgb(80, 130, 210);
+  font-family: Verdana, sans-serif;
+  color: white;
+}
+
+.footer-line {
+  max-width: 950px;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 0.88em;
+}
+
+.footer-pair {
+  display: inline-block;
+}
+
+.year-level {
+/*  background-color: white;
+  color: #63849c;
+  font-weight: 600; */
+  border: 2px solid white;
+  display: inline-block;
+  padding: 0 3px;
+  margin: 2px 5px 2px 10px;
+}
+.curric-link {
+  display: inline-block;
+}
+
+.footer a {
+  color: inherit;
+  font-size: 0.92em;
+  font-weight: 300;
+}
+
+/* Within area subgroups/boxes */
+.floating-box, .floating-box-bare, .central-box {
+  display: inline-block;
+  vertical-align: top;
+  text-align:left;
+  margin: auto;
+  padding: 5px 15px;
+}
+
+.central-box {
+  width: 95%;
+  display:block;
+}
+
+.floating-box-bare {
+  width: 49%;
+  padding: 0;
+}
+
+.floating-box {
+  width: 45%;
+}
+
+/* Third level - box within box */
+.img-box {
+  display: block;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+}
+
+.code {
+  border: solid 1px #966701;
+  background-color: #f2e68a;
+  padding: 5px;
+  margin: 0 0 8px 0;
+  font-family: Verdana, sans-serif;
+}
+
+.code p {
+  padding: 0;
+  margin: 0;
+}
+
+.announcement {
+  font-size: 1.6em;
+  text-align: center;
+  width: 100%;
+  padding: 150px 0;
+  margin: 0;
+}
+
+/* game page specific styles */
+#game {
+  margin: 20px auto 0 auto;
+  padding: 0;
+}
+#pane {
+  background-color: white;
+  border: solid 2px blue;
+}
+#pane2 {
+  background-color: white;
+  border: solid 2px blue;
+}
+.instructions {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.instructions p {
+  font-family: "Comic Neue", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+
+/* Sets the style of the top navigation bar. */
+.navbar {
+	background: linear-gradient(to right, rgb(80, 130, 210), rgb(50, 100, 190) 50%, rgb(80, 130, 210));
+  font-size:1em;
+  margin: 0 0 10px 0;
+}
+
+.navbar ul {
+  width: 472px;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+}
+
+.navbar li {float: left;}
+
+.navbar li a {
+  display: inline-block;
+  color: white;
+  text-align:center;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.navbar li a:hover, .navbar .dropdown:hover {
+background: linear-gradient(180deg, rgb(80, 130, 210), rgb(50, 100, 190));
+}
+
+.navbar li.dropdown {
+  display: inline-block;
+}
+
+.navbar .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(50, 100, 190);
+  min-width: 140px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.navbar .dropdown-content a {
+  color: white;
+  padding: 12px;
+  text-decoration: none;
+  display:block;
+  text-align: left;
+}
+
+.navbar .dropdown-content a:hover {
+  background: linear-gradient(180deg, rgb(80, 130, 210), rgb(50, 100, 190), rgb(80, 130, 210));
+}
+
+.navbar .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.navbar li a.onpage, .navbar li a:hover.onpage{
+  background: rgb(80, 130, 210);
+}
+
+/* Allowances for smaller devices. */
+@media screen and (max-width: 900px) {
+  body {
+    font-size: 100%;
+  }
+
+  .floating-box, .floating-box-bare {
+    width: 95%;
+  }
+
+  .img-box {
+    width: 75%;
+  }
+  .footer-line {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  body { font-size: 87.5%;}
+
+  .navbar {
+  background: rgb(50, 100, 190);
+}
+
+  .navbar ul {
+    width: 320px;
+  }
+
+  .navbar li a {
+    padding: 8px 7px;
+  }
+
+  .navbar .dropdown-content a {
+    padding: 8px 7px;
+  }
+    .img-box {
+    width: 100%;
+  }
+}
+
+/* Stop phone number recognition on iphone. */
+a[href^"tel"]{
+  color: inherit;
+  text-decoration: none;
+}
