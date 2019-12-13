@@ -18,6 +18,17 @@
  */
 
 
+export function screenToCartesian(pos, scroll) {
+  let x = pos.x + scroll.x;
+  let y = 600 - pos.y + scroll.y;
+  return {x: x, y: y};
+}
+
+export function cartesianToScreen(pos, scroll) {
+  let x = pos.x - scroll.x;
+  let y = 600 - pos.y + scroll.y;
+  return {x: x, y: y};
+}
 
 export function variation(width) {
     return Math.random() * width - 0.5 * width;

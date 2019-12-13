@@ -59,7 +59,8 @@ const log = {
   // persistant even when "endCollectionperiod() is called"
   keysHeld: new Set([]),
   mousePosition: {x: undefined, y: undefined},
-  mouseOnCanvas: true,
+  mouseOnCanvas: false,
+  mouseHasBeenOnCanvas: false,
 }
 
 // access functions
@@ -215,7 +216,6 @@ function mouseDown(e) {
     log.mouseJustClicked = "other";
   }
 
-
 	log.mousePosition = Help.pageToCanvasCoord({x: e.clientX, y: e.clientY}, ctx.canvas, 2);
 
 }
@@ -226,6 +226,7 @@ function mouseMove(e) {
   log.mouseMoving = true;
 	log.mousePosition = Help.pageToCanvasCoord({x: e.clientX, y: e.clientY}, ctx.canvas, 2);
   log.mouseOnCanvas = true;
+  log.mouseHasBeenOnCanvas = true;
 	// ctx.canvas.style.cursor = 'default';
 }
 
