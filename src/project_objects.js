@@ -8,27 +8,146 @@ export {drawProject, processProjectInput};
 const ctx = document.getElementById('pane').getContext('2d');
 
 export const projects = [
+  // Scratch Projects
   {
-    pos: {x: 1000, y: 600},
-    type: "godot",
-    name: "Scrolling Shooter",
-    link: "http://mrLman.com",
+    pos: {x: 420, y: 140},
+    type: "scratch",
+    name: "Action Animation",
+    link: "",
     hover: false,
   },
   {
-    pos: {x: 500, y: 65},
+    pos: {x: 473, y: 60},
+    type: "scratch",
+    name: "Survival Game",
+    link: "",
+    hover: false,
+  },
+  {
+    pos: {x: 573, y: 90},
+    type: "scratch",
+    name: "Maze Race",
+    link: "",
+    hover: false,
+  },
+  {
+    pos: {x: 700, y: 64},
+    type: "scratch",
+    name: "Horizontal Shooter",
+    link: "",
+    hover: false,
+  },
+  {
+    pos: {x: 665, y: 200},
+    type: "scratch",
+    name: "Clicker Game",
+    link: "",
+    hover: false,
+  },
+  {
+    pos: {x: 930, y: 137},
+    type: "scratch",
+    name: "Evasion Game",
+    link: "",
+    hover: false,
+  },
+  {
+    pos: {x: 1110, y: 90},
+    type: "scratch",
+    name: "Extension",
+    link: "",
+    hover: false,
+  },
+
+
+
+
+  // Godot Projects
+  {
+    pos: {x: 350, y: 270},
+    type: "godot",
+    name: "Secret Console",
+    link: "",
+    hover: false,
+  },
+  {
+    pos: {x: 470, y: 325},
+    type: "godot",
+    name: "Text Mini-Games",
+    link: "",
+    hover: false,
+  },
+  {
+    pos: {x: 396, y: 428},
+    type: "godot",
+    name: "Pong",
+    link: "",
+    hover: false,
+  },
+  {
+    pos: {x: 671, y: 366},
+    type: "godot",
+    name: "Car Polo",
+    link: "",
+    hover: false,
+  },
+  {
+    pos: {x: 578, y: 527},
+    type: "godot",
+    name: "Vertical Shooter",
+    link: "",
+    hover: false,
+  },
+  {
+    pos: {x: 772, y: 477},
+    type: "godot",
+    name: "Top Down Racer",
+    link: "",
+    hover: false,
+  },
+  {
+    pos: {x: 534, y: 670},
+    type: "godot",
+    name: "Scrolling Platformer",
+    link: "",
+    hover: false,
+  },
+  {
+    pos: {x: 923, y: 495},
+    type: "godot",
+    name: "Adventure RPG",
+    link: "",
+    hover: false,
+  },
+  {
+    pos: {x: 1101, y: 550},
+    type: "godot",
+    name: "3D Ball Maze",
+    link: "",
+    hover: false,
+  },
+  {
+    pos: {x: 978, y: 738},
+    type: "godot",
+    name: "First-Person Shooter",
+    link: "",
+    hover: false,
+  },
+  {
+    pos: {x: 1140, y: 760},
+    type: "godot",
+    name: "3D Platformer",
+    link: "",
+    hover: false,
+  },
+  // Asset Development Projects
+  {
+    pos: {x: 209, y: 179},
     type: "art",
     name: "Basic Pixel Art",
-    link: "http://mrLman.com",
+    link: "",
     hover: false,
   },
-  {
-    pos: {x: 270, y: 300},
-    type: "scratch",
-    name: "Pong",
-    link: "http://mrLman.com",
-    hover: false,
-  }
 ]
 
 function processProjectInput(s, Input, program) {
@@ -47,11 +166,16 @@ function processProjectInput(s, Input, program) {
 }
 
 function checkInPath(pos, size, mousePos) {
-  let missLeft = mousePos.x < pos.x - size/2;
-  let missRight = mousePos.x > pos.x + size/2;
-  let missUp = mousePos.y > pos.y + size/2;
-  let missDown = mousePos.y < pos.y - size/2;
-  return (!(missLeft || missRight || missUp || missDown));
+  if (mousePos.x && mousePos.y) {
+    let missLeft = mousePos.x < pos.x - size/2;
+    let missRight = mousePos.x > pos.x + size/2;
+    let missUp = mousePos.y > pos.y + size/2;
+    let missDown = mousePos.y < pos.y - size/2;
+    return (!(missLeft || missRight || missUp || missDown));
+  }
+  else {
+    return false;
+  }
 }
 
 function drawProject(s, program, ctx) {

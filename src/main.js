@@ -21,7 +21,7 @@ const program = {
 // assets - move into preloader later?
 
 program.images.island = new Image();
-program.images.island.src = 'assets/images/island_map.png';
+program.images.island.src = 'assets/images/island_map.svg';
 
 program.images.art = new Image();
 program.images.art.src = 'assets/images/brush.png';
@@ -51,7 +51,7 @@ function processInput(loop) {
 
 	// scrolling
 	// let scrollThisFrame = {x: 0, y: 0};
-	let mouseScrollRange = 50;
+	let mouseScrollRange = 80;
 	let moc = Input.log.mouseHasBeenOnCanvas;
 	if (Input.isHeld("scroll_left") || (Input.log.mousePosition.x < mouseScrollRange && moc)) {
 		program.scroll.x -= program.scrollSpeed;
