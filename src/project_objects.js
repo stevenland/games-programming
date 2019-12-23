@@ -10,144 +10,67 @@ const ctx = document.getElementById('pane').getContext('2d');
 export const projects = [
   // Scratch Projects
   {
-    pos: {x: 420, y: 140},
+    pos: {x: 442, y: 120},
     type: "scratch",
-    name: "Action Animation",
-    link: "",
+    name: "Fruit Ninja",
+    link: "https://sites.google.com/ed.act.edu.au/scratch-game-programming/198347",
     hover: false,
   },
   {
-    pos: {x: 473, y: 60},
+    pos: {x: 530, y: 50},
     type: "scratch",
-    name: "Survival Game",
-    link: "",
+    name: "World's Hardest Game",
+    link: "https://sites.google.com/ed.act.edu.au/scratch-game-programming/045389",
     hover: false,
   },
   {
-    pos: {x: 573, y: 90},
+    pos: {x: 525, y: 160},
     type: "scratch",
-    name: "Maze Race",
-    link: "",
+    name: "Tamagotchi",
+    link: "https://sites.google.com/ed.act.edu.au/scratch-game-programming/523980",
     hover: false,
   },
   {
-    pos: {x: 700, y: 64},
+    pos: {x: 615, y: 110},
     type: "scratch",
-    name: "Horizontal Shooter",
-    link: "",
+    name: "Cookie Clicker",
+    link: "https://sites.google.com/ed.act.edu.au/scratch-game-programming/822371",
     hover: false,
   },
   {
-    pos: {x: 665, y: 200},
+    pos: {x: 700, y: 42},
     type: "scratch",
-    name: "Clicker Game",
-    link: "",
+    name: "Gradius",
+    link: "https://sites.google.com/ed.act.edu.au/scratch-game-programming/090335",
     hover: false,
   },
   {
-    pos: {x: 930, y: 137},
+    pos: {x: 713, y: 174},
     type: "scratch",
-    name: "Evasion Game",
-    link: "",
+    name: "Asteroids",
+    link: "https://sites.google.com/ed.act.edu.au/scratch-game-programming/129234",
     hover: false,
   },
   {
-    pos: {x: 1110, y: 90},
+    pos: {x: 836, y: 105},
     type: "scratch",
-    name: "Extension",
-    link: "",
+    name: "Tank",
+    link: "https://sites.google.com/ed.act.edu.au/scratch-game-programming/384301",
     hover: false,
   },
-
 
 
 
   // Godot Projects
-  {
-    pos: {x: 350, y: 270},
-    type: "godot",
-    name: "Secret Console",
-    link: "",
-    hover: false,
-  },
-  {
-    pos: {x: 470, y: 325},
-    type: "godot",
-    name: "Text Mini-Games",
-    link: "",
-    hover: false,
-  },
-  {
-    pos: {x: 396, y: 428},
-    type: "godot",
-    name: "Pong",
-    link: "",
-    hover: false,
-  },
-  {
-    pos: {x: 671, y: 366},
-    type: "godot",
-    name: "Car Polo",
-    link: "",
-    hover: false,
-  },
-  {
-    pos: {x: 578, y: 527},
-    type: "godot",
-    name: "Vertical Shooter",
-    link: "",
-    hover: false,
-  },
-  {
-    pos: {x: 772, y: 477},
-    type: "godot",
-    name: "Top Down Racer",
-    link: "",
-    hover: false,
-  },
-  {
-    pos: {x: 534, y: 670},
-    type: "godot",
-    name: "Scrolling Platformer",
-    link: "",
-    hover: false,
-  },
-  {
-    pos: {x: 923, y: 495},
-    type: "godot",
-    name: "Adventure RPG",
-    link: "",
-    hover: false,
-  },
-  {
-    pos: {x: 1101, y: 550},
-    type: "godot",
-    name: "3D Ball Maze",
-    link: "",
-    hover: false,
-  },
-  {
-    pos: {x: 978, y: 738},
-    type: "godot",
-    name: "First-Person Shooter",
-    link: "",
-    hover: false,
-  },
-  {
-    pos: {x: 1140, y: 760},
-    type: "godot",
-    name: "3D Platformer",
-    link: "",
-    hover: false,
-  },
-  // Asset Development Projects
-  {
-    pos: {x: 209, y: 179},
-    type: "art",
-    name: "Basic Pixel Art",
-    link: "",
-    hover: false,
-  },
+
+
+
+
+
+  // Art Projects
+
+
+
 ]
 
 function processProjectInput(s, Input, program) {
