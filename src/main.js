@@ -15,7 +15,8 @@ const program = {
 	scrollSpeed: 4,
 	scroll: {x: 0, y: 0},
 	shiftAmount: 60,
-	colorShifter: 0
+	colorShifter: 0,
+	maxScroll: 0, // max 200
 };
 
 // assets - move into preloader later?
@@ -24,13 +25,16 @@ program.images.island = new Image();
 program.images.island.src = 'assets/images/island_map.svg';
 
 program.images.art = new Image();
-program.images.art.src = 'assets/images/brush.png';
+program.images.art.src = 'assets/images/brush.svg';
 
 program.images.scratch = new Image();
-program.images.scratch.src = 'assets/images/scratch.png';
+program.images.scratch.src = 'assets/images/scratch.svg';
 
 program.images.godot = new Image();
-program.images.godot.src = 'assets/images/godot.png';
+program.images.godot.src = 'assets/images/godot.svg';
+
+program.images.godot_tutorial = new Image();
+program.images.godot_tutorial.src = 'assets/images/godot_tutorial.svg';
 
 function processInput(loop) {
 	refreshMessageSystem(loop);
@@ -61,8 +65,8 @@ function processInput(loop) {
 	}
 	if (Input.isHeld("scroll_right") || (Input.log.mousePosition.x > 1000 - mouseScrollRange && moc)) {
 		program.scroll.x += program.scrollSpeed;
-		if (program.scroll.x > 200) {
-			program.scroll.x = 200;
+		if (program.scroll.x > program.maxScroll) {
+			program.scroll.x = program.maxScroll;
 		}
 	}
 	if (Input.isHeld("scroll_down") || (Input.log.mousePosition.y > 600 - mouseScrollRange && moc)) {
@@ -73,8 +77,8 @@ function processInput(loop) {
 	}
 	if (Input.isHeld("scroll_up") || (Input.log.mousePosition.y < mouseScrollRange && moc)) {
 		program.scroll.y += program.scrollSpeed;
-		if (program.scroll.y > 200) {
-			program.scroll.y = 200;
+		if (program.scroll.y > program.maxScroll) {
+			program.scroll.y = program.maxScroll;
 		}
 	}
 	// clear logs for collection heading into next frame

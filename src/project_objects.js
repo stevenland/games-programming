@@ -59,17 +59,74 @@ export const projects = [
     hover: false,
   },
 
-
+  // Godot Tutorial Projects
+  {
+    pos: {x: 365, y: 180},
+    type: "godot_tutorial",
+    name: "Hidden Console",
+    link: "",
+    hover: false,
+  },
+  {
+    pos: {x: 400, y: 245},
+    type: "godot_tutorial",
+    name: "Secret Keys",
+    link: "",
+    hover: false,
+  },
+  {
+    pos: {x: 507, y: 283},
+    type: "godot_tutorial",
+    name: "_____ Launcher",
+    link: "",
+    hover: false,
+  },
+  {
+    pos: {x: 346, y: 336},
+    type: "godot_tutorial",
+    name: "Excuse Generator",
+    link: "",
+    hover: false,
+  },
 
   // Godot Projects
-
-
-
-
+  {
+    pos: {x: 449, y: 368},
+    type: "godot",
+    name: "Pong",
+    link: "",
+    hover: false,
+  },
 
   // Art Projects
-
-
+  {
+    pos: {x: 245, y: 180},
+    type: "art",
+    name: "Finding Images",
+    link: "",
+    hover: false,
+  },
+  {
+    pos: {x: 121, y: 198},
+    type: "art",
+    name: "Fonts & Sounds",
+    link: "",
+    hover: false,
+  },
+  {
+    pos: {x: 177, y: 265},
+    type: "art",
+    name: "Vector Art",
+    link: "",
+    hover: false,
+  },
+  {
+    pos: {x: 62, y: 283},
+    type: "art",
+    name: "Pixel Art",
+    link: "",
+    hover: false,
+  },
 
 ]
 
