@@ -38,21 +38,21 @@ export const projects = [
     hover: false,
   },
   {
-    pos: {x: 700, y: 42},
+    pos: {x: 690, y: 42},
     type: "scratch",
     name: "Gradius",
     link: "https://sites.google.com/ed.act.edu.au/scratch-game-programming/090335",
     hover: false,
   },
   {
-    pos: {x: 713, y: 174},
+    pos: {x: 703, y: 174},
     type: "scratch",
     name: "Asteroids",
     link: "https://sites.google.com/ed.act.edu.au/scratch-game-programming/129234",
     hover: false,
   },
   {
-    pos: {x: 836, y: 105},
+    pos: {x: 825, y: 105},
     type: "scratch",
     name: "Tank",
     link: "https://sites.google.com/ed.act.edu.au/scratch-game-programming/384301",
@@ -136,7 +136,7 @@ function processProjectInput(s, Input, program) {
     s.hover = true;
     ctx.canvas.style.cursor = 'pointer';
     // handle mouse click
-    if (Input.isMouseJustClicked()) {
+    if (Input.isMouseJustClicked() && s.link != "") {
       window.open(s.link, "_blank");
     }
   } else {
@@ -160,10 +160,11 @@ function checkInPath(pos, size, mousePos) {
 
 function drawProject(s, program, ctx) {
   ctx.save();
-
+  // draw icon
   let pos = cartesianToScreen(s.pos, program.scroll);
+  if (s.link === "") {ctx.globalAlpha = 0.3} // wash out projects with no link
   ctx.drawImage(program.images[s.type], pos.x - 20, pos.y - 20, 40, 40);
-
+  // draw text
   if (s.hover) {
     ctx.font = "20px px10";
     ctx.textAlign = "center";
