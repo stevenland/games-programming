@@ -97,6 +97,43 @@ export const projects = [
     link: "",
     hover: false,
   },
+  {
+    pos: {x: 643, y: 310},
+    type: "godot",
+    name: "Rocket League (2d)",
+    link: "",
+    hover: false,
+  },
+  {
+    pos: {x: 570, y: 425},
+    type: "godot",
+    name: "1942",
+    link: "",
+    hover: false,
+  },
+  // third-party Godot tutorials
+  {
+    pos: {x: 520, y: 555},
+    type: "godot_third_party",
+    name: "Circle Jump",
+    link: "https://www.youtube.com/playlist?list=PLsk-HSGFjnaHH6JyhJI2w8JI76v1F6B-X",
+    hover: false,
+  },
+  {
+    pos: {x: 828, y: 364},
+    type: "godot_third_party",
+    name: "Mobile RPG",
+    link: "https://www.youtube.com/playlist?list=PL9FzW-m48fn1JgK_mavg7ym6nvchF9Yjb",
+    hover: false,
+  },
+  {
+    pos: {x: 805, y: 525},
+    type: "godot_third_party",
+    name: "3d Maze Game",
+    link: "https://www.youtube.com/playlist?list=PLda3VoSoc_TSBBOBYwcmlamF1UrjVtccZ",
+    hover: false,
+  },
+
 
   // Art Projects
   {
@@ -162,7 +199,9 @@ function drawProject(s, program, ctx) {
   ctx.save();
   // draw icon
   let pos = cartesianToScreen(s.pos, program.scroll);
-  if (s.link === "") {ctx.globalAlpha = 0.3} // wash out projects with no link
+  if (!s.hover || s.link === "") {
+    ctx.globalAlpha = 0.6;
+  }
   ctx.drawImage(program.images[s.type], pos.x - 20, pos.y - 20, 40, 40);
   // draw text
   if (s.hover) {
@@ -171,7 +210,12 @@ function drawProject(s, program, ctx) {
     ctx.fillStyle = `rgba(0, 0, 0, 0.4)`;
     let pos = cartesianToScreen(s.pos, program.scroll);
     ctx.fillText(s.name, pos.x + 1, pos.y + 1 - 25);
-    ctx.fillStyle = `rgba(${140 + program.colorShifter}, ${70 + program.colorShifter}, ${110 + program.colorShifter}, 1)`;
+    if (s.link === "") {
+      ctx.fillStyle = "rgba(100, 100, 100, 0.8)";
+    }
+    else {
+      ctx.fillStyle = `rgba(${140 + program.colorShifter}, ${70 + program.colorShifter}, ${110 + program.colorShifter}, 1)`;
+    }
     ctx.fillText(s.name, pos.x, pos.y - 25);
   }
 

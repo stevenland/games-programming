@@ -36,6 +36,9 @@ program.images.godot.src = 'assets/images/godot.svg';
 program.images.godot_tutorial = new Image();
 program.images.godot_tutorial.src = 'assets/images/godot_tutorial.svg';
 
+program.images.godot_third_party = new Image();
+program.images.godot_third_party.src = 'assets/images/godot_third_party.svg';
+
 function processInput(loop) {
 	refreshMessageSystem(loop);
 	Input.pollGamepads();
