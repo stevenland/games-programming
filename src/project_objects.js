@@ -91,14 +91,14 @@ export const projects = [
 
   // Godot Projects
   {
-    pos: {x: 640, y: 290},
+    pos: {x: 625, y: 290},
     type: "godot",
     name: "Rocket League (2d)",
     link: "https://sites.google.com/ed.act.edu.au/godot-game-programming/252019",
     hover: false,
   },
   {
-    pos: {x: 570, y: 425},
+    pos: {x: 550, y: 425},
     type: "godot",
     name: "1942",
     link: "https://sites.google.com/ed.act.edu.au/godot-game-programming/294734",
@@ -113,16 +113,30 @@ export const projects = [
     hover: false,
   },
   {
-    pos: {x: 828, y: 364},
+    pos: {x: 800, y: 330},
     type: "godot_third_party",
-    name: "Pokemon Style Battle",
+    name: "Pokemon-Style Battle",
     link: "https://www.youtube.com/playlist?list=PL9FzW-m48fn1JgK_mavg7ym6nvchF9Yjb",
     hover: false,
   },
   {
-    pos: {x: 805, y: 525},
+    pos: {x: 680, y: 500},
     type: "godot_third_party",
-    name: "3d Monkeyball Style Game",
+    name: "2D Mario-Style Game",
+    link: "https://youtu.be/Mc13Z2gboEk",
+    hover: false,
+  },
+  {
+    pos: {x: 700, y: 400},
+    type: "godot_third_party",
+    name: "Intro to 3D",
+    link: "https://www.youtube.com/playlist?list=PLsk-HSGFjnaFwmOFrfD4gQQqvgvEUielY",
+    hover: false,
+  },
+  {
+    pos: {x: 880, y: 515},
+    type: "godot_third_party",
+    name: "3d Monkeyball-Style Game",
     link: "https://www.youtube.com/playlist?list=PLda3VoSoc_TSBBOBYwcmlamF1UrjVtccZ",
     hover: false,
   },
@@ -153,7 +167,7 @@ export const projects = [
     pos: {x: 62, y: 283},
     type: "art",
     name: "Pixel Art",
-    link: "https://sites.google.com/ed.act.edu.au/game-asset-development/401895",
+    link: "https://www.youtube.com/playlist?list=PLO3K3VFvlU6Akj3W29_nMLZFnwNOVbAzI",
     hover: false,
   },
 
