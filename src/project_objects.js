@@ -63,35 +63,49 @@ export const projects = [
   {
     pos: {x: 365, y: 175},
     type: "godot_tutorial",
-    name: "Text Coding Basics",
+    name: "Coding Basics",
     link: "https://sites.google.com/ed.act.edu.au/godot-game-programming/288605",
     hover: false,
   },
   {
-    pos: {x: 360, y: 245},
+    pos: {x: 360, y: 235},
     type: "godot_tutorial",
     name: "Excuse Generator",
     link: "https://sites.google.com/ed.act.edu.au/godot-game-programming/011098",
     hover: false,
   },
   {
-    pos: {x: 480, y: 245},
+    pos: {x: 300, y: 310},
     type: "godot_tutorial",
-    name: "_____ Launcher",
-    link: "https://sites.google.com/ed.act.edu.au/godot-game-programming/249510",
+    name: "Typing Game",
+    link: "https://sites.google.com/ed.act.edu.au/godot-game-programming/294423",
     hover: false,
   },
   {
-    pos: {x: 449, y: 340},
+    pos: {x: 460, y: 245},
     type: "godot_tutorial",
-    name: "Pong",
-    link: "https://sites.google.com/ed.act.edu.au/godot-game-programming/328566",
+    name: "Launcher",
+    link: "https://sites.google.com/ed.act.edu.au/godot-game-programming/249510",
     hover: false,
   },
 
   // Godot Projects
   {
-    pos: {x: 625, y: 290},
+    pos: {x: 440, y: 330},
+    type: "godot",
+    name: "Frogger",
+    link: "https://sites.google.com/ed.act.edu.au/godot-game-programming/510283",
+    hover: false,
+  },
+  {
+    pos: {x: 395, y: 420},
+    type: "godot",
+    name: "Pong",
+    link: "https://sites.google.com/ed.act.edu.au/godot-game-programming/328566",
+    hover: false,
+  },
+  {
+    pos: {x: 625, y: 315},
     type: "godot",
     name: "Rocket League (2d)",
     link: "https://sites.google.com/ed.act.edu.au/godot-game-programming/252019",
@@ -106,35 +120,35 @@ export const projects = [
   },
   // third-party Godot tutorials
   {
-    pos: {x: 555, y: 555},
+    pos: {x: 575, y: 555},
     type: "godot_third_party",
     name: "Circle Jump",
     link: "https://www.youtube.com/playlist?list=PLsk-HSGFjnaHH6JyhJI2w8JI76v1F6B-X",
     hover: false,
   },
   {
-    pos: {x: 800, y: 330},
+    pos: {x: 820, y: 330},
     type: "godot_third_party",
     name: "Pokemon-Style Battle",
     link: "https://www.youtube.com/playlist?list=PL9FzW-m48fn1JgK_mavg7ym6nvchF9Yjb",
     hover: false,
   },
   {
-    pos: {x: 680, y: 500},
+    pos: {x: 700, y: 500},
     type: "godot_third_party",
-    name: "2D Mario-Style Game",
+    name: "2D Platformer",
     link: "https://youtu.be/Mc13Z2gboEk",
     hover: false,
   },
   {
-    pos: {x: 700, y: 400},
+    pos: {x: 720, y: 420},
     type: "godot_third_party",
     name: "Intro to 3D",
     link: "https://www.youtube.com/playlist?list=PLsk-HSGFjnaFwmOFrfD4gQQqvgvEUielY",
     hover: false,
   },
   {
-    pos: {x: 880, y: 515},
+    pos: {x: 880, y: 525},
     type: "godot_third_party",
     name: "3d Monkeyball-Style Game",
     link: "https://www.youtube.com/playlist?list=PLda3VoSoc_TSBBOBYwcmlamF1UrjVtccZ",
@@ -143,34 +157,26 @@ export const projects = [
 
   // Art Projects
   {
-    pos: {x: 245, y: 180},
+    pos: {x: 225, y: 180},
     type: "art",
-    name: "Finding Images",
+    name: "Finding Assets Online",
     link: "https://sites.google.com/ed.act.edu.au/game-asset-development/623550",
     hover: false,
   },
   {
-    pos: {x: 121, y: 198},
-    type: "art",
-    name: "Fonts & Sounds",
-    link: "https://sites.google.com/ed.act.edu.au/game-asset-development/161074",
-    hover: false,
-  },
-  {
-    pos: {x: 177, y: 265},
+    pos: {x: 175, y: 245},
     type: "art",
     name: "Vector Art",
     link: "https://sites.google.com/ed.act.edu.au/game-asset-development/376690",
     hover: false,
   },
   {
-    pos: {x: 62, y: 283},
+    pos: {x: 70, y: 265},
     type: "art",
     name: "Pixel Art",
     link: "https://www.youtube.com/playlist?list=PLO3K3VFvlU6Akj3W29_nMLZFnwNOVbAzI",
     hover: false,
   },
-
 ]
 
 function processProjectInput(s, Input, program) {
