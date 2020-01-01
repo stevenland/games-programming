@@ -108,14 +108,14 @@ export const projects = [
     pos: {x: 625, y: 315},
     type: "godot",
     name: "Rocket League (2d)",
-    link: "https://sites.google.com/ed.act.edu.au/godot-game-programming/252019",
+    link: "",
     hover: false,
   },
   {
     pos: {x: 550, y: 425},
     type: "godot",
     name: "1942",
-    link: "https://sites.google.com/ed.act.edu.au/godot-game-programming/294734",
+    link: "",
     hover: false,
   },
   // third-party Godot tutorials
@@ -167,7 +167,7 @@ export const projects = [
     pos: {x: 175, y: 245},
     type: "art",
     name: "Vector Art",
-    link: "https://sites.google.com/ed.act.edu.au/game-asset-development/376690",
+    link: "",
     hover: false,
   },
   {
