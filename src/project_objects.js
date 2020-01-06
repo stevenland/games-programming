@@ -98,7 +98,7 @@ export const projects = [
     hover: false,
   },
   {
-    pos: {x: 395, y: 420},
+    pos: {x: 390, y: 410},
     type: "godot",
     name: "Pong",
     link: "https://sites.google.com/ed.act.edu.au/godot-game-programming/328566",
@@ -108,11 +108,11 @@ export const projects = [
     pos: {x: 625, y: 315},
     type: "godot",
     name: "Rocket League (2d)",
-    link: "",
+    link: "https://sites.google.com/ed.act.edu.au/godot-game-programming/252019",
     hover: false,
   },
   {
-    pos: {x: 550, y: 425},
+    pos: {x: 560, y: 445},
     type: "godot",
     name: "1942",
     link: "",
