@@ -115,7 +115,7 @@ export const projects = [
     pos: {x: 560, y: 445},
     type: "godot",
     name: "1942",
-    link: "",
+    link: "https://sites.google.com/ed.act.edu.au/godot-game-programming/894734",
     hover: false,
   },
   // third-party Godot tutorials
