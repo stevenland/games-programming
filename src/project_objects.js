@@ -91,14 +91,14 @@ export const projects = [
 
   // Godot Projects
   {
-    pos: {x: 440, y: 330},
+    pos: {x: 445, y: 325},
     type: "godot",
     name: "Frogger",
     link: "https://sites.google.com/ed.act.edu.au/godot-game-programming/510283",
     hover: false,
   },
   {
-    pos: {x: 390, y: 410},
+    pos: {x: 400, y: 410},
     type: "godot",
     name: "Pong",
     link: "https://sites.google.com/ed.act.edu.au/godot-game-programming/328566",
@@ -112,13 +112,20 @@ export const projects = [
     hover: false,
   },
   {
-    pos: {x: 560, y: 445},
+    pos: {x: 545, y: 445},
     type: "godot",
     name: "1942",
     link: "https://sites.google.com/ed.act.edu.au/godot-game-programming/894734",
     hover: false,
   },
   // third-party Godot tutorials
+  {
+    pos: {x: 670, y: 410},
+    type: "godot_third_party",
+    name: "Pixel Platformer",
+    link: "https://youtu.be/0713nlQxU7I",
+    hover: false,
+  },
   {
     pos: {x: 575, y: 555},
     type: "godot_third_party",
@@ -141,7 +148,7 @@ export const projects = [
     hover: false,
   },
   {
-    pos: {x: 720, y: 420},
+    pos: {x: 775, y: 415},
     type: "godot_third_party",
     name: "Intro to 3D",
     link: "https://www.youtube.com/playlist?list=PLsk-HSGFjnaFwmOFrfD4gQQqvgvEUielY",
